@@ -1,0 +1,102 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "letmehelp/base",
+  "version": "1.0.0",
+  "title": "LetMeHelp: Receptionist",
+  "category": "widgets",
+  "icon": "sos",
+  "description": "This block displays available links based on user input, before showing child blocks.",
+  "supports": {
+    "anchor": true,
+    "align": true,
+    "html": false,
+    "color": {
+      "gradients": true,
+      "link": true,
+      "__experimentalDefaultControls": {
+        "background": true,
+        "text": true
+      }
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true
+    },
+    "__experimentalBorder": {
+      "color": true,
+      "radius": true,
+      "style": true,
+      "width": true,
+      "__experimentalDefaultControls": {
+        "color": true,
+        "radius": true,
+        "style": true,
+        "width": true
+      }
+    }
+  },
+  "attributes": {
+    "intro": {
+      "type": "object",
+      "default": {
+        "text": ""
+      }
+    },
+    "subject": {
+      "type": "object",
+      "default": {
+        "input": {
+          "label": {
+            "text": "Subject",
+            "isVisible": true
+          },
+          "placeholderText": "Enter text here",
+          "description": {
+            "text": "",
+            "isVisible": true
+          }
+        },
+        "button": {
+          "text": "Submit",
+          "color": {
+            "background": "",
+            "text": ""
+          }
+        }
+      }
+    },
+    "result": {
+      "type": "object",
+      "default": {
+        "text": ""
+      }
+    },
+    "nothingFound": {
+      "type": "object",
+      "default": {
+        "text": ""
+      }
+    },
+    "destination": {
+      "type": "object",
+      "default": {
+        "button": {
+          "text": "Next",
+          "color": {
+            "background": "",
+            "text": ""
+          },
+          "style": "outline"
+        }
+      }
+    }
+  },
+  "textdomain": "letmehelp",
+  "script": [
+    "letmehelp-public-base"
+  ],
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}
